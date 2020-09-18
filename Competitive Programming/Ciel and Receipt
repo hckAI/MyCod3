@@ -1,0 +1,26 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int T;
+	cin>>T;
+	while(T-- !=0)
+	{
+	    int price,count=0;
+	    cin>>price;
+	    for(int i=12;i>0;i--)
+	    {
+	        int menu=pow(2,i-1);
+	        if(price - menu >= 0)
+	        {
+	            price =price - menu;
+	            i++;
+	            count=count+1;
+	        }
+	    }
+	    cout<<count<<"\n";
+	}
+	return 0;
+}
