@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T-- != 0)
+	{
+	    int num,temp=0;
+	    cin>>num;
+	    if(num >=100)
+	    {
+	        temp = temp + num/100;
+	        num %=100;
+	    }
+	    if(num >=50)
+	    {
+	        temp = temp + num/50;
+	        num %=50;
+	    }
+	    if(num >=10)
+	    {
+	        temp = temp + num/10;
+	        num %=10;
+	    }
+	    if(num >=5)
+	    {
+	        temp = temp + num/5;
+	        num %=5;
+	    }
+	    if(num >=2)
+	    {
+	        temp = temp + num/2;
+	        num %=2;
+	    }
+	    if(num >=1)
+	    temp = temp + num/1;
+	    
+	   cout<<temp<<"\n"; 
+	}
+	return 0;
+}
